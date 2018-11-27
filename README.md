@@ -8,7 +8,7 @@ In this homework I automate the generation of n-gram abundance histograms for al
 
 ## Visualization of Makefile pipeline
 
-![A visualization of the pipeline][makefile-visual.png]
+![A visualization of the pipeline][https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/makefile-visual.png]
 
 ## Reports
 
