@@ -1,9 +1,10 @@
 # Homework 09: Automating Data-analysis Pipelines
 
 In this homework I automate the generation of n-gram abundance histograms for all English words in Webster's Second International Dictionary. My contributions are:
-* [A Python file for generating the histogram data](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-histogram.py)
+* [A Python script for generating the histogram data](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-histogram.py)
 * [An R markdown report of the histograms](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-report.Rmd)
 * Modifications to the Makefile to allow Jenny Bryan's words analysis, as well as this n-gram analysis
+* Including a submodule of Github user vak's [implementation](https://github.com/vak/makefile2dot) of visualizing Makefiles.
 
 ## Reports
 
@@ -51,6 +52,12 @@ To run the n-gram analysis with any n, for example 5:
 
 ```
 make ngram n=5
+```
+
+To create the Makefile visualization:
+
+```
+make visual
 ```
 
 ## n-grams
