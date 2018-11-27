@@ -1,5 +1,51 @@
 # Homework 09: Automating Data-analysis Pipelines
 
+In this homework I automate the generation of n-gram abundance histograms for all English words in Webster's Second International Dictionary. My contributions are:
+* [A Python file for generating the histogram data](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-histogram.py)
+* [An R markdown report of the histograms](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-report.Rmd)
+* Modifications to the Makefile to allow Jenny Bryan's words analysis, as well as this n-gram analysis
+
+## Reports
+
+[Jenny Bryan's word length analysis](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/word-report.md)
+[My n-gram abundance histogram analysis](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-report.md)
+
+## Dependencies
+
+### Python
+Python 3.6.5
+numpy 1.14.5
+
+### R
+R 3.5.1
+ggplot2 3.1.0
+
+## Usage
+
+For all default analyses
+
+```
+make all
+```
+
+For just Jenny Bryan's word analysis
+
+```
+make word
+```
+
+For my n-gram analysis with n=3:
+
+```
+make ngram
+```
+
+To run the n-gram analysis with any n, for example 5:
+
+```
+make ngram n=5
+```
+
 ## n-grams
 
 From [wikipedia](https://en.wikipedia.org/wiki/N-gram):
@@ -47,5 +93,4 @@ Abundance Freq
 ```
 
 In this report, I will quickly present 2 plots of abundance histograms of 3-grams for all words found in Webster's Second International dictionary.
-
 
