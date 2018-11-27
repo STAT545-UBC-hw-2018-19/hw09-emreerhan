@@ -6,6 +6,10 @@ In this homework I automate the generation of n-gram abundance histograms for al
 * Modifications to the Makefile to allow Jenny Bryan's words analysis, as well as this n-gram analysis
 * Including a submodule of Github user vak's [implementation](https://github.com/vak/makefile2dot) of visualizing Makefiles.
 
+## Visualization of Makefile pipeline
+
+![A visualization of the pipeline][makefile-visual.png]
+
 ## Reports
 
 [Jenny Bryan's word length analysis](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/word-report.md)
