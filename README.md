@@ -4,7 +4,7 @@ In this homework I automate the generation of n-gram abundance histograms for al
 * [A Python script for generating the histogram data](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-histogram.py)
 * [An R markdown report of the histograms](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-report.Rmd)
 * Modifications to the Makefile to allow Jenny Bryan's words analysis, as well as this n-gram analysis
-* Including a submodule of Github user vak's [implementation](https://github.com/vak/makefile2dot) of visualizing Makefiles.
+* Including a submodule of Github user vak's [implementation](https://github.com/vak/makefile2dot) of visualizing Makefiles to create the visual below.
 
 ## Visualization of Makefile pipeline
 
@@ -114,3 +114,8 @@ So the resulting abundance histogram is:
 
 In this report, I will quickly present 2 plots of abundance histograms of 3-grams for all words found in Webster's Second International dictionary.
 
+## Credit
+
+This homework assignment was seeded from [STAT545's Make activity](https://github.com/STAT545-UBC/make-activity)
+
+The visualization of the Makefile is done using [vak's makefile2dot script](https://github.com/vak/makefile2dot)
