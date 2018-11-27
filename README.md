@@ -8,17 +8,24 @@ In this homework I automate the generation of n-gram abundance histograms for al
 ## Reports
 
 [Jenny Bryan's word length analysis](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/word-report.md)
+
 [My n-gram abundance histogram analysis](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/ngram-report.md)
 
 ## Dependencies
 
 ### Python
+
+```
 Python 3.6.5
 numpy 1.14.5
+```
 
 ### R
+
+```
 R 3.5.1
 ggplot2 3.1.0
+```
 
 ## Usage
 
