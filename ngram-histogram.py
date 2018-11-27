@@ -1,3 +1,4 @@
+import numpy as np
 import sys
 
 def main():
@@ -5,12 +6,14 @@ def main():
     words_file = sys.argv[1]
     # Second param is size of n-grams
     n = sys.argv[2]
+    ngrams_freq = dict()
     with open(words_file, 'r') as words:
         word = words.readline().strip().lower()
         while not word is '':
             for ngram in get_ngrams(word, int(n)):
-                print(ngram)
+                ngrams_freq[ngram] = ngrams_freq.get(ngram, 0) + 1 # Add 1 to frequency
             word = words.readline().strip().lower()
+    print(ngrams_freq)
 
 
 def get_ngrams(word, n = 3):
