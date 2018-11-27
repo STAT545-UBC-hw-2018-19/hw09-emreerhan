@@ -10,6 +10,11 @@ word: word-report.html
 
 ngram: ngram-report.html
 
+visual: makefile-visual.png
+
+makefile-visual.png: makefile2dot/makefile2dot.py
+	makefile2dot/makefile2dot.py <Makefile |dot -Tpng > makefile-visual.png
+
 word-report.html: word-report.rmd word-histogram.tsv word-histogram.png
 	Rscript -e 'rmarkdown::render("$<")'
 

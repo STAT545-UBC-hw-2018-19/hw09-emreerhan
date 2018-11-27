@@ -1,0 +1,3 @@
+[submodule "makefile2dot"]
+	path = makefile2dot
+	url = https://github.com/vak/makefile2dot.git
