@@ -13,10 +13,12 @@ def main():
             for ngram in get_ngrams(word, int(n)):
                 ngrams_freq[ngram] = ngrams_freq.get(ngram, 0) + 1 # Add 1 to frequency
             word = words.readline().strip().lower()
-    print(ngrams_freq)
+    abundances, frequencies = np.unique(list(ngrams_freq.values()), return_counts=True)
+    print("Abundance", "Freq", sep='\t')
+    for abundance, frequency in zip(abundances, frequencies):
+        print(abundance, frequency, sep='\t')
 
-
-def get_ngrams(word, n = 3):
+def get_ngrams(word, n=3):
     """
     Return all n-grams of word
     """
