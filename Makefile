@@ -1,9 +1,9 @@
-all: report.html
+all: word-report.html
 
 clean:
 	rm -f words.txt word-histogram.tsv word-histogram.png word-report.md word-report.html
 
-report.html: report.rmd word-histogram.tsv word-histogram.png
+word-report.html: word-report.rmd word-histogram.tsv word-histogram.png
 	Rscript -e 'rmarkdown::render("$<")'
 
 word-histogram.png: word-histogram.tsv
