@@ -91,23 +91,25 @@ xte
 The abundance of 3-grams is:
 
 ```
-3-gram  Abundance
-Thi 1
-his 1
-isi 1
-sis 1
-ist 1
-tex 3
-ext 3
-xte 2
+|3-gram|Abundance|
+|---|-|
+|Thi|1|
+|his|1|
+|isi|1|
+|sis|1|
+|ist|1|
+|tex|3|
+|ext|3|
+|xte|2|
 ```
 
 So the resulting abundance histogram is:
 ```
-Abundance Freq
-1 5
-2 1
-3 2
+|Abundance|Freq|
+|-|-|
+|1|5|
+|2|1|
+|3|2|
 ```
 
 In this report, I will quickly present 2 plots of abundance histograms of 3-grams for all words found in Webster's Second International dictionary.
