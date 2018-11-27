@@ -6,6 +6,10 @@ all: word-report.html ngram-report.html
 clean:
 	rm -f words.txt *-histogram.tsv *-histogram.png *-report.md *-report.html
 
+word: word-report.html
+
+ngram: ngram-report.html
+
 word-report.html: word-report.rmd word-histogram.tsv word-histogram.png
 	Rscript -e 'rmarkdown::render("$<")'
 
