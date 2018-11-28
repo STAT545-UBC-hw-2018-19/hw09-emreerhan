@@ -1,10 +1,10 @@
 # size of n-grams for n-gram analysis
 n?=3
 
-all: reports/word-report.html ngram-report.html
+all: word ngram visual
 
 clean:
-	rm -f data/words.txt data/*-histogram.tsv images/*-histogram.png reports/*-report.md reports/*-report.html
+	rm -f data/words.txt data/*-histogram.tsv images/*-histogram.png images/makefile-visual.png reports/*-report.md reports/*-report.html
 
 word: reports/word-report.html
 
