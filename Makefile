@@ -4,7 +4,7 @@ n?=3
 all: reports/word-report.html ngram-report.html
 
 clean:
-	rm -f words.txt *-histogram.tsv *-histogram.png *-report.md *-report.html
+	rm -f data/words.txt data/*-histogram.tsv images/*-histogram.png reports/*-report.md reports/*-report.html
 
 word: reports/word-report.html
 
