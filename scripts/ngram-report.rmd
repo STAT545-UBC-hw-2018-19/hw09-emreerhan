@@ -10,8 +10,8 @@ output:
 ## Plots
 
 
-![*Fig. 1* A histogram of ngram abundances for English words in the Webster's Second International dictionary](ngram-histogram.png)
+![*Fig. 1* A histogram of ngram abundances for English words in the Webster's Second International dictionary](../images/ngram-histogram.png)
 
 It's hard to get much information out of this plot. Clearly the data is exponentially distributed, so let's log(y) and fit a LOESS line.
 
-![*Fig. 2* A logy histogram of ngram abundances for English words in the Webster's Second International dictionary](ngram-logy-histogram.png)
+![*Fig. 2* A logy histogram of ngram abundances for English words in the Webster's Second International dictionary](../images/ngram-logy-histogram.png)
