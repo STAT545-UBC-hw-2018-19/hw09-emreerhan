@@ -1,45 +1,57 @@
 # size of n-grams for n-gram analysis
 n?=3
 
-all: word-report.html ngram-report.html
+all: reports/word-report.html ngram-report.html
 
 clean:
 	rm -f words.txt *-histogram.tsv *-histogram.png *-report.md *-report.html
 
-word: word-report.html
+word: reports/word-report.html
 
-ngram: ngram-report.html
+ngram: reports/ngram-report.html
 
-visual: makefile-visual.png
+visual: images/makefile-visual.png
 
-makefile-visual.png: makefile2dot/makefile2dot.py
-	makefile2dot/makefile2dot.py <Makefile |dot -Tpng > makefile-visual.png
+images/makefile-visual.png: makefile2dot/makefile2dot.py
+	mkdir -p images
+	makefile2dot/makefile2dot.py <Makefile |dot -Tpng > images/makefile-visual.png
 
-word-report.html: word-report.rmd word-histogram.tsv word-histogram.png
+reports/word-report.html: scripts/word-report.rmd data/word-histogram.tsv images/word-histogram.png
+	mkdir -p reports
 	Rscript -e 'rmarkdown::render("$<")'
+	mv scripts/word-report.html reports
+	mv scripts/word-report.md reports
 
-ngram-report.html: ngram-report.rmd ngram-histogram.tsv ngram-histogram.png ngram-logy-histogram.png
+reports/ngram-report.html: scripts/ngram-report.rmd data/ngram-histogram.tsv images/ngram-histogram.png images/ngram-logy-histogram.png
+	mkdir -p reports
 	Rscript -e 'rmarkdown::render("$<")'
-
-word-histogram.png: word-histogram.tsv
+	mv scripts/ngram-report.html reports
+	mv scripts/ngram-report.md reports
+	
+images/word-histogram.png: data/word-histogram.tsv
+	mkdir -p images
 	Rscript -e 'library(ggplot2); qplot(Length, Freq, data=read.delim("$<")); ggsave("$@")'
 	rm Rplots.pdf
 
-ngram-histogram.png: ngram-histogram.tsv
+images/ngram-histogram.png: data/ngram-histogram.tsv
+	mkdir -p images
 	Rscript -e 'library(ggplot2); qplot(Abundance, Freq, data=read.delim("$<"), size=I(0.2)); ggsave("$@")'
 	rm Rplots.pdf
 	
-ngram-logy-histogram.png: ngram-histogram.tsv
+images/ngram-logy-histogram.png: data/ngram-histogram.tsv
+	mkdir -p images
 	Rscript -e 'library(ggplot2); qplot(Abundance, log10(Freq), data=head(read.delim("$<"), n = 1000), geom=c("point", "smooth"), size=I(0.2)); ggsave("$@")'
 	rm Rplots.pdf
 
-word-histogram.tsv: word-histogram.r words.txt
+data/word-histogram.tsv: scripts/word-histogram.r data/words.txt
+	mkdir -p data
 	Rscript $<
+	mv word-histogram.tsv data
 
-ngram-histogram.tsv: ngram-histogram.py words.txt
-	python3 ngram-histogram.py words.txt $(n) > ngram-histogram.tsv
+data/ngram-histogram.tsv: scripts/ngram-histogram.py data/words.txt
+	python3 $< data/words.txt $(n) > $@
 
-words.txt: /usr/share/dict/words
+data/words.txt: /usr/share/dict/words
 	cp $< $@
 
 # words.txt:
