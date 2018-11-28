@@ -37,9 +37,7 @@ ggplot2 3.1.0
 
 ### makefile2dot
 
-```
 [graphviz](https://graphviz.org/)
-```
 
 
 ## Usage
