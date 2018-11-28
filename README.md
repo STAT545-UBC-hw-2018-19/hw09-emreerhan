@@ -1,9 +1,12 @@
 # Homework 09: Automating Data-analysis Pipelines
 
+This repository was seeded from [STAT545's Make activity](https://github.com/STAT545-UBC/make-activity). It's an exploration of using Makefiles to make automated and reproducible data analysis pipelines.
+
 In this homework I automate the generation of n-gram abundance histograms for all English words in Webster's Second International Dictionary. My contributions are:
 * [A Python script for generating the histogram data](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/scripts/ngram-histogram.py)
 * [An R markdown report of the histograms](https://github.com/STAT545-UBC-students/hw09-emreerhan/blob/master/scripts/ngram-report.rmd)
 * Modifications to the Makefile to allow Jenny Bryan's words analysis, as well as this n-gram analysis
+* A clean directory structure, with the appropriate modifications in the scripts and Makefile
 * Including a submodule of Github user vak's [implementation](https://github.com/vak/makefile2dot) of visualizing Makefiles to create the visual below.
 
 ## Visualization of Makefile pipeline
@@ -62,6 +65,12 @@ To create the Makefile visualization:
 
 ```
 make visual
+```
+
+To remove all outputs
+
+```
+make clean
 ```
 
 ## n-grams
