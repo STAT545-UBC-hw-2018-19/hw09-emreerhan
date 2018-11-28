@@ -72,7 +72,7 @@ From [wikipedia](https://en.wikipedia.org/wiki/N-gram):
 
 There are many applications of n-grams, however I am much more familiar with n-grams in the field of computational biology, where they're called k-mers. There are many useful things that can be learned from the set of n-grams from a text or a biological sequence. If you're interested, I encourage you to follow the link to the Wikipedia article above.
 
-Abundance histograms of n-grams is often useful for downstream analysis of a text. An abundance histogram describes the frequency of n-grams that occur n times.
+Abundance histograms of n-grams is often useful for downstream analysis of a text. An abundance histogram describes the frequency of abundances of n-grams.
 
 ### A short example
 
